@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Parkinsans';
+    src: url('../HTML/fonts/Parkinsans-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf8e7;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0f7db;
+}
+
+
+nav {   
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Make nav take full width */
+    padding: 2px;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+
+}
+
+.logo-text {
+    font-size: 24px;
+    color: darkgreen;
+    line-height: 1; 
+    font-family: 'Parkinsans', sans-serif;
+}
+
+.nav-buttons {
+    display: flex;
+    margin-left: auto;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+nav button {
+    margin-left: auto; 
+    margin: 0 10px;
+    padding: 10px; /* Button padding */
+    background-color: #004d00; 
+    color: white; /* Text color */
+    border: none; 
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; 
+    min-width: 100px; 
+    font-family: 'Parkinsans', sans-serif;
+}
+
+
+nav button:hover {
+    background-color: #45833a;
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+}
+
+.media-box {
+    width: 50%;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-size: cover; /* Cover to fit the container */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 2.5%;
+}
+
+.media-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.text-content {
+    width: 55%;
+    text-align: center;
+}
+
+.text-content1 {
+    width: 55%;
+    text-align: left;
+}
+
+.text-content h1 {
+    margin-top: 3%;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #003700;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+.text-content p {
+    line-height: 1.5;
+    color: #003700;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; /* allow wrapping if the screen is too small */
+    gap: 20px; /* space forda images */
+}
+
+
+.gallery-item {
+    width: 30%; /* width of each images */
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+
+.gallery img {
+    width: 100%; /* images fill da container */
+    height: auto; /* maintain aspect ratio */
+    cursor: pointer;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    display: block;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.close-btn {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+figcaption {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+footer {
+    background-color: #e0f7db; 
+    padding: 10px;
+    text-align: left; 
+    position: relative; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #003700; 
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #003700;
+}
+
+.footer-text span {
+    margin-right: 10px;
+}
+
+.footer-text a {
+    margin: 0 15px; /* Space between da links */
+    text-decoration: none; 
+    color: #003700; 
+    transition: color 0.3s; 
+}
+
+.footer-text a:hover {
+    color: #45833a; 
+
+}
+
+
+#downloadCV {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #004d00;; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+
+#downloadCV:hover {
+    background-color: #45833a;
+    transform: scale(1.1); 
+}
+
+
+#downloadCV:active {
+    transform: scale(1); /* return to da normal size when clicked hehe*/
+}
